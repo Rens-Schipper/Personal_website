@@ -1,0 +1,256 @@
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    color: #222
+    }
+    
+.headshot{
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    padding-bottom: 25px;
+
+}
+    
+#forward {
+  top:40%;
+  position: absolute;
+  left: 88.5%;
+  background-color: Transparent;
+  border: 0px;
+  height: 40px;
+  width: 40px;
+  color: black;
+  font-size:30px;
+}
+
+#backward {
+  top:40%;
+  position: absolute;
+  left:13.5%;
+  background-color: Transparent;
+  border: 0px;
+  height: 40px;
+  width: 40px;
+  color: black;
+  font-size:30px;
+}
+
+
+#text_section{
+    height: 600px;
+}
+
+ 
+#wiki_headshot {
+    height: 150;
+    width: 120px;
+    border-radius: 25px;
+    border: 2px solid #000000;
+}
+
+#wiki_items1{
+    transition: 1s ease;
+    bottom: 0;
+    border-radius: 25px;
+    border: 2px solid #000000;
+    background: #ffffff;
+    position:relative;
+    overflow-y: scroll;
+
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+#wiki_items1::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+#wiki_items1 {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+#wiki_items1:hover {
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    transform: font-size(10);
+    z-index: 1;
+    transform-origin:bottom left;
+    position:relative;
+}
+
+/* seperate */
+#wiki_items2{
+    transition: 1s ease;
+    bottom: 0;
+    border-radius: 25px;
+    border: 2px solid #000000;
+    background: #ffffff;
+    position:relative;
+    overflow-y: scroll;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+#wiki_items2::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+#wiki_items2 {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+#wiki_items2:hover {
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    transform: font-size(10);
+    z-index: 1;
+    transform-origin:bottom left;
+    position:relative;
+}
+
+/* seperate */
+#wiki_items3{
+    transition: 1s ease;
+    bottom: 0;
+    border-radius: 25px;
+    border: 2px solid #000000;
+    background: #ffffff;
+    position:relative;
+    overflow-y: scroll;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+#wiki_items3::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+#wiki_items3 {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+#wiki_items3:hover {
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    transform: font-size(10);
+    z-index: 1;
+    transform-origin:bottom left;
+    position:relative;
+}
+
+/* seperate */
+#wiki_items4{
+    transition: 1s ease;
+    bottom: 0;
+    border-radius: 25px;
+    border: 2px solid #000000;
+    background: #ffffff;
+    position:relative;
+    overflow-y: scroll;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+#wiki_items4::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+#wiki_items4 {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+#wiki_items4:hover {
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    transform: font-size(10);
+    z-index: 1;
+    transform-origin:bottom right;
+    position:relative;
+}
+
+
+#wiki_items:hover #wiki_par {
+    font-size: 10
+}
+
+#wiki_section {
+    position: relative;
+    
+}
+
+#text_section {
+    height: 600px;
+}
+
+
+.navbar li {
+    padding: .8rem;
+    }
+
+.navbar-nav {
+    padding-right: 20px;
+    }
+
+/* Navbar container */
+.navbar {
+    
+    background-color: #333;
+    font-family: Arial;
+  }
+  
+.dropdown-item {
+    float: right;
+    padding-left: 50px;
+    
+}
+
+.dropdown {
+    
+    max-width:100%;
+}   
+
+.navbar .nav > li {
+    z-index: 10000;
+    overflow:visble;
+    }
+
+.test {
+    width: 500px;
+    height: 500px;
+    }
+
+.icon {
+    width: 50px;
+    height: 50px;
+    }
+
+.uni_icon {
+        width: 100px;
+        height:100px;
+        }
+    
+.wide_icon {
+    width: 75px;
+    height: 50px;
+    }
+    
+.wide_icon {
+    width: 100px;
+    height: 50px;
+    }
+    
+#slider {
+    margin-right: 0px;
+    }
+

@@ -1,0 +1,16 @@
+
+
+<head>
+    {{ resources|safe }}
+  </head>
+  
+  <header>
+    {{ script|safe }}
+  </header>
+  
+  {% block content %}
+  <h1>Plot</h1>
+  <div>
+    {{ div|safe }}
+  </div>
+  {% endblock %}
