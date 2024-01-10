@@ -32,10 +32,6 @@ app = Flask(__name__)
 def home():
     return render_template("home.html", title = "check")
 
-@app.route("/test")
-def test():
-    return render_template("test.html", title = "test")
-
 @app.route("/miranda")
 def miranda():
     imgs = []
@@ -54,47 +50,6 @@ def miranda():
     wiki_df = pd.read_csv("./static/data/wiki.csv", delimiter = "|")
     wiki_df["wiki_link"] = wiki_df["wiki_link"].replace('"', '', regex=True).replace(' ', '', regex=True)
     return render_template("miranda.html", title = "The life of Fransisco de Miranda.", images = imgs, stories = stories, cities = cities, dates = dates, titles = titles, people = people, people_bools = people_bools, wiki_df = wiki_df)
-
-import asyncio
-
-from tornado.httpserver import HTTPServer
-from tornado.ioloop import IOLoop
-
-from bokeh.application import Application
-from bokeh.application.handlers import FunctionHandler
-from bokeh.embed import server_document
-from bokeh.server.server import BaseServer
-from bokeh.server.tornado import BokehTornado
-from bokeh.server.util import bind_sockets
-from when2leap import modify_doc
-#from usa_demographic_clustering import modify_doc
-
-# can't use shortcuts here, since we are passing to low level BokehTornado
-bkapp = Application(FunctionHandler(modify_doc))
-
-# This is so that if this app is run using something like "gunicorn -w 4" then
-# each process will listen on its own port
-sockets, port = bind_sockets("localhost", 5006)
-
-@app.route('/election_analysis', methods=['GET'])
-def bkapp_page():
-    script = server_document('http://localhost:5006/bkapp')
-    return render_template("election_analysis.html", script=script, template="Flask")
-    #return render_template("usa_demo_clustering.html", script=script, template="Flask")
-
-def bk_worker():
-    asyncio.set_event_loop(asyncio.new_event_loop())
-
-    bokeh_tornado = BokehTornado({'/bkapp': bkapp}, extra_websocket_origins=["localhost:5000","localhost:5006","localhost:8000"])
-    bokeh_http = HTTPServer(bokeh_tornado)
-    bokeh_http.add_sockets(sockets)
-
-    server = BaseServer(IOLoop.current(), bokeh_tornado, bokeh_http)
-    server.start()
-    server.io_loop.start()
-
-from threading import Thread
-Thread(target=bk_worker).start()
 
 if __name__ == "__main__":
     app.run(debug=True, port=8000)
